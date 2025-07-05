@@ -143,8 +143,8 @@ if __name__ == "__main__":
         candidates = generator.generate_sequences(
             coord,
             num_seq=1,
-            temperature=0.8,
-            top_k=4
+            temperature=0.8, # 适度多样性
+            top_k=4 # 每个位置考虑前4个可能
         )
         result["pdb_id"].append(id_name)
         result["seq"].append(candidates[0])
